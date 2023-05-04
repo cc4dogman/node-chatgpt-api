@@ -1,0 +1,61 @@
+{
+  // 使用 IntelliSense 了解相关属性。
+  // 悬停以查看现有属性的描述。
+  // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "cli",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceRoot}",
+      "runtimeExecutable": "npm",
+      "windows": {
+        "runtimeExecutable": "npm.cmd"
+      },
+      "runtimeArgs": ["run", "cli"],
+      "env": {
+        "OPENAI_API_KEY": "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",
+        "OPENAI_PROXY": "socks5://127.0.0.1:7890",
+        // "DEBUG_LOG": true
+        "STORAGE_FILE_PATH": "/data/node-chatgpt-api/cache.json"
+      },
+      "console": "integratedTerminal",
+      "protocol": "auto",
+      "restart": true,
+      "autoAttachChildProcesses": true
+    },
+    {
+      "name": "server",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceRoot}",
+      "runtimeExecutable": "npm",
+      "windows": {
+        "runtimeExecutable": "npm.cmd"
+      },
+      "runtimeArgs": ["run", "server"],
+      "env": {
+        "OPENAI_API_KEY": "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",
+        "OPENAI_PROXY": "http://127.0.0.1:7890",
+        "STORAGE_FILE_PATH": "/data/node-chatgpt-api/cache.json",
+        "DEBUG_LOG": true
+      },
+      "console": "integratedTerminal",
+      "protocol": "auto",
+      "restart": true,
+      "autoAttachChildProcesses": true
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "env": {
+        // "DEBUG": "*:*"
+      }
+    }
+  ]
+}

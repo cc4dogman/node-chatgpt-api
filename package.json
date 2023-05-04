@@ -48,6 +48,7 @@
     "clipboardy": "^3.0.0",
     "dotenv": "^16.0.3",
     "fastify": "^4.11.0",
+    "fetch-socks": "^1.2.0",
     "fetch-undici": "^3.0.1",
     "https-proxy-agent": "^5.0.1",
     "inquirer": "^9.1.4",
@@ -62,7 +63,10 @@
     "@keyv/redis": "^2.5.6",
     "eslint": "^8.35.0",
     "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.27.5",
-    "nodemon": "^2.0.22"
+    "eslint-plugin-prettier": "^4.2.1",
+    "nodemon": "^2.0.22",
+    "prettier": "2.8.8"
   }
 }
